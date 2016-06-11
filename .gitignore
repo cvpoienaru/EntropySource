@@ -3,6 +3,8 @@
 *.ko
 *.obj
 *.elf
+*.slo
+*.lo
 
 # Precompiled Headers
 *.gch
@@ -12,13 +14,14 @@
 *.lib
 *.a
 *.la
+*.lai
 *.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
+# Shared objects
 *.so
 *.so.*
 *.dylib
+*.dll
 
 # Executables
 *.exe
@@ -30,4 +33,10 @@
 
 # Debug files
 *.dSYM/
-*.su
+
+# Fortran module files
+*.mod
+
+# Build paths
+/bin/*
+/lib/*
