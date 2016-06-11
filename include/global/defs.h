@@ -33,12 +33,12 @@
 #include <glib.h>
 
 /** Represents the definition of a successfull operation. */
-#define C_SUCCESS EXIT_SUCCESS
+#define ES_SUCCESS EXIT_SUCCESS
 
 /** Represents the definition of an unsuccessfull operation. */
-#define C_FAILURE EXIT_FAILURE
+#define ES_FAILURE EXIT_FAILURE
 
 /** Represents the definition of a non-matchable file descriptor. */
-#define NO_FILE_DESCRIPTOR -1
+#define ES_FILE_DESCRIPTOR -1
 
 #endif /* ENTROPY_SOURCE_GLOBAL_DEFS_H_ */
