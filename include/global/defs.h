@@ -30,6 +30,8 @@
 
 #include <stdlib.h>
 
+#include <glib.h>
+
 /** Represents the definition of a successfull operation. */
 #define C_SUCCESS EXIT_SUCCESS
 
