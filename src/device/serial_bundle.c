@@ -100,7 +100,7 @@ void es_free_serial_bundle(struct es_serial_bundle **bundle)
  * connected.
  * @return ES_SUCCESS if the operation was successfull, ES_FAILURE otherwise.
  */
-int es_init_serial_bundle(
+const int es_init_serial_bundle(
 	struct es_serial_bundle *bundle,
 	const speed_t baud_rate)
 {
@@ -174,7 +174,7 @@ void es_destroy_serial_bundle(struct es_serial_bundle **bundle)
  *
  * @param bundle The serial bundle to be validated.
  */
-int es_validate_serial_bundle(struct es_serial_bundle *bundle)
+const int es_validate_serial_bundle(struct es_serial_bundle *bundle)
 {
 	/* Perform sanity checks. */
 	if(!bundle)
