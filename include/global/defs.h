@@ -39,6 +39,6 @@
 #define ES_FAILURE EXIT_FAILURE
 
 /** Represents the definition of a non-matchable file descriptor. */
-#define ES_FILE_DESCRIPTOR -1
+#define ES_DEFAULT_FILE_DESCRIPTOR -1
 
 #endif /* ENTROPY_SOURCE_GLOBAL_DEFS_H_ */
