@@ -241,7 +241,7 @@ const int es_update_digest(struct es_digest *digest, const char *data)
  * @return The address of a string buffer if the operation was successfull,
  * NULL otherwise.
  */
-const char* es_get_string_digest(struct es_digest *digest)
+char* es_get_digest_string(struct es_digest *digest)
 {
 	char *digest_data = NULL;
 
