@@ -32,6 +32,24 @@
 
 #include <glib.h>
 
+/**
+ * Represents the boolean FALSE value.
+ * We must define this value here if not already defined, otherwise some modules
+ * might not compile.
+ */
+#ifndef FALSE
+#define FALSE 0
+#endif
+
+/**
+ * Represents the boolean TRUE value.
+ * We must define this value here if not already defined, otherwise some modules
+ * might not compile.
+ */
+#ifndef TRUE
+#define TRUE !(FALSE)
+#endif
+
 /** Represents the definition of a successfull operation. */
 #define ES_SUCCESS EXIT_SUCCESS
 
