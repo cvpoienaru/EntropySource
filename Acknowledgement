@@ -1,0 +1,18 @@
+The device serial driver was inspired by designs of:
+	Tod E. Kurt [1];
+	Chris Heydrick (also inspired by Tod E. Kurt's design) [2];
+
+Arduino sketch module was inspired by:
+	SparkFun BME280 Arduino library usage examples [3];
+	SparkFun TSL2561 Arduino library usage examples [4];
+
+References:
+[1] Tod E. Kurt GitHub account link and blog link
+	https://github.com/todbot/arduino-serial
+	http://todbot.com/blog/2006/12/06/arduino-serial-c-code-to-talk-to-arduino/
+[2] Chris Heydrick blog link
+	https://chrisheydrick.com/2012/06/17/how-to-read-serial-data-from-an-arduino-in-linux-with-c-part-3/
+[3] SparkFun BME280 Arduino library usage examples
+	https://github.com/sparkfun/SparkFun_BME280_Arduino_Library/blob/master/examples/
+[4] SparkFun TSL2561 Arduino library usage examples
+	https://github.com/sparkfun/TSL2561_Luminosity_Sensor_BOB/tree/master/Libraries/Arduino/examples/SparkFunTSL2561Example
