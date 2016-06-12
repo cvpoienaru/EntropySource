@@ -30,6 +30,7 @@
 
 #include <stdlib.h>
 
+#include <global/defs.h>
 #include <crypto/digest.h>
 
 /**
