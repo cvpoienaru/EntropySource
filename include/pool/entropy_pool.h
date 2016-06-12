@@ -84,7 +84,7 @@ struct es_entropy_pool* es_alloc_entropy_pool(
 void es_free_entropy_pool(struct es_entropy_pool **pool, const int size);
 
 /**
- * Initializes an etropy pool with the default values.
+ * Initializes an entropy pool with the default values.
  *
  * @param pool The entropy pool to be initialized.
  * @param size The number of entropy blocks to be stored in an entropy pool.
