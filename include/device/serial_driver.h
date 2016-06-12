@@ -2,6 +2,11 @@
  * Copyright (c) 2016, Codrin-Victor Poienaru <cvpoienaru@gmail.com>.
  * All rights reserved.
  *
+ * Special thanks for the original design inspiring this module goes to:
+ * Tod E. Kurt;
+ * Chris Heydrick (also inspired by Tod E. Kurt's design);
+ * See acknowledgement file for more info.
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *
