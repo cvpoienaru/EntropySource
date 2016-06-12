@@ -31,7 +31,8 @@ ES_LIB_OUT = $(ES_LIB)/$(ES_LIB_PREFIX)$(ES_LIB_NAME).$(ES_LIB_EXT)
 
 # Library source & object files
 ES_SOURCES = $(ES_LIB_SRC)/math_defs.c \
-	$(ES_LIB_SRC)/conversion.c
+	$(ES_LIB_SRC)/conversion.c \
+	$(ES_LIB_SRC)/alloc_type.c
 ES_OBJECTS = $(ES_SOURCES:.c=.o)
 
 # Compiler options
