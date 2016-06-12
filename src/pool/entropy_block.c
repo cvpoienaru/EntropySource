@@ -195,7 +195,7 @@ void es_free_entropy_block(struct es_entropy_block **block)
 		es_free_entropy_array(&(*block)->buffer);
 
 	/* Destroy the mutex associated with the current entropy block. */
-	pthread_mutex_destroy(&block->mutex);
+	pthread_mutex_destroy(&(*block)->mutex);
 
 	/* Free the entropy block structure. */
 	free(*block);
