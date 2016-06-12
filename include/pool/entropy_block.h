@@ -61,9 +61,7 @@
  */
 #define ES_MAXIMUM_BLOCK_THRESHOLD 100.0
 
-/**
- * Structure defining the basic entropy block.
- */
+/** Structure defining the basic entropy block. */
 struct es_entropy_block {
 	/** The number of entropy bytes to be stored in an entropy block. */
 	int size;
