@@ -27,3 +27,6 @@
 declare -a primary_build_list=( \
 	"global" \
 	"device")
+
+declare -a test_build_list=( \
+	"test/device")

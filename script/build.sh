@@ -80,6 +80,7 @@ while [[ $# > 0 ]]; do
 			source $ES_SCRIPT/build_list.sh
 			make_directory_structure
 			make_build primary_build_list[@] $ES_SRC
+			make_build test_build_list[@] $ES_SRC
 		;;
 
 		--clean|-c)
