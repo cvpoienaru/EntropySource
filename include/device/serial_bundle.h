@@ -34,10 +34,11 @@
 #include <global/defs.h>
 
 /**
- * Represents the minimum number of characters to be read until the system call
+ * Represents the minimum number of bytes to be read until the system call
  * returns.
+ * Multiply the value by 8 to get the value in bits.
  */
-#define ES_SERIAL_VMIN 64
+#define ES_SERIAL_VMIN 8
 
 /** Represents the minimum waiting time until the read system call returns. */
 #define ES_SERIAL_VTIME 0
