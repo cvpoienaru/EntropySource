@@ -46,12 +46,6 @@
 /** Represents the restart time for the device connected to the serial port. */
 #define ES_SERIAL_RESTART_TIME 2000
 
-/** Represents a special code marking the start of the serial data transfer. */
-#define ES_SERIAL_START_TRANSFER_CODE '^'
-
-/** Represents a special code marking the end of the serial data transfer. */
-#define ES_SERIAL_STOP_TRANSFER_CODE '$'
-
 /** Represents the definition of a basic serial bundle. */
 struct es_serial_bundle {
 	/**
