@@ -174,6 +174,7 @@ void es_destroy_device_descriptor(struct es_device_descriptor **descriptor)
  * Validates a device descriptor.
  *
  * @param descriptor The device descriptor to be validated.
+ * @return ES_SUCCESS if the operation was successfull, ES_FAILURE otherwise.
  */
 const int es_validate_device_descriptor(
 	struct es_device_descriptor *descriptor)

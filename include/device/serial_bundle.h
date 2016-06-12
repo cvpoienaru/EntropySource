@@ -125,6 +125,7 @@ void es_destroy_serial_bundle(struct es_serial_bundle **bundle);
  * Validates a serial bundle.
  *
  * @param bundle The serial bundle to be validated.
+ * @return ES_SUCCESS if the operation was successfull, ES_FAILURE otherwise.
  */
 const int es_validate_serial_bundle(struct es_serial_bundle *bundle);
 
