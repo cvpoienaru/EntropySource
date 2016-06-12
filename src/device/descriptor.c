@@ -152,7 +152,10 @@ struct es_device_descriptor* es_create_device_descriptor(
 	status = ES_SUCCESS;
 
 exit:
-	/* If the operation failed, free the partially created device descriptor. */
+	/*
+	 * If the operation failed, destroy the partially created device
+	 * descriptor.
+	 */
 	if(status == ES_FAILURE && descriptor)
 		es_destroy_device_descriptor(&descriptor);
 

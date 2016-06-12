@@ -143,7 +143,7 @@ struct es_digest* es_create_digest(const int digest_type)
 	status = ES_SUCCESS;
 
 exit:
-	/* If the operation failed, free the partially created digest. */
+	/* If the operation failed, destroy the partially created digest. */
 	if(status == ES_FAILURE && digest)
 		es_destroy_digest(&digest);
 

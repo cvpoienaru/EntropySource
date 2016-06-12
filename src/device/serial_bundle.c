@@ -151,7 +151,7 @@ struct es_serial_bundle* es_create_serial_bundle(
 	status = ES_SUCCESS;
 
 exit:
-	/* If the operation failed, free the partially created serial bundle. */
+	/* If the operation failed, destroy the partially created serial bundle. */
 	if(status == ES_FAILURE && bundle)
 		es_destroy_serial_bundle(&bundle);
 
