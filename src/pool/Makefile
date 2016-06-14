@@ -38,7 +38,8 @@ ES_OBJECTS = $(ES_SOURCES:.c=.o)
 # Compiler options
 CC = gcc
 CFLAGS = -Wall -O3 $(ES_FLAGS)
-LFLAGS = `pkg-config --cflags --libs glib-2.0` -lpthread -lesglobal -lescrypto
+LFLAGS = `pkg-config --cflags --libs glib-2.0` -lpthread -lesglobal \
+	-lescollections -lescrypto
 
 all: $(ES_SOURCES) $(ES_LIB_OUT)
 
