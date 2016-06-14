@@ -119,6 +119,7 @@ int* es_get_clean_entropy_block_index(struct es_entropy_pool *pool)
  */
 const int es_consume_entropy_block(struct es_entropy_pool *pool, char **content)
 {
+	int status;
 	int *index = NULL;
 	struct es_entropy_block *block = NULL;
 
@@ -151,23 +152,23 @@ const int es_consume_entropy_block(struct es_entropy_pool *pool, char **content)
 
 	/* Atomic entropy block content request operation. */
 	pthread_mutex_lock(&block->mutex);
-	ret = es_request_entropy_block_content(block, content);
+	status = es_request_entropy_block_content(block, content);
 	pthread_mutex_unlock(&block->mutex);
 
 	/* Atomic queue push operation. */
 	pthread_mutex_lock(&pool->mutex);
-	if(ret != ES_SUCCESS) {
+	if(status != ES_SUCCESS) {
 		/* Something went very wrong ... */
 		if(block)
 			es_destroy_entropy_block(&block);
 
 		free(index);
 	} else {
-		es_push_queue(bundle->pool->dirty_queue, index);
+		es_push_queue(pool->dirty_queue, index);
 	}
 	pthread_mutex_unlock(&pool->mutex);
 
-	return ret;
+	return status;
 }
 
 /**

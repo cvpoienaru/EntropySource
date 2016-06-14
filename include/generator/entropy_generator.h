@@ -76,7 +76,9 @@ int* es_get_clean_entropy_block_index(struct es_entropy_pool *pool);
  * @param content The content of the clean entropy block extracted.
  * @return ES_SUCCESS if the operation was successfull, ES_FAILURE otherwise.
  */
-const int es_consume_entropy_block(struct es_entropy_pool *pool, char *content);
+const int es_consume_entropy_block(
+	struct es_entropy_pool *pool,
+	char **content);
 
 /**
  * Cleans the entropy block specified by the given index.
