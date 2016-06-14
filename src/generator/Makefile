@@ -30,7 +30,8 @@ ES_LIB_SRC = $(ES_SRC)/generator
 ES_LIB_OUT = $(ES_LIB)/$(ES_LIB_PREFIX)$(ES_LIB_NAME).$(ES_LIB_EXT)
 
 # Library source & object files
-ES_SOURCES = $(ES_LIB_SRC)/entropy_bundle.c
+ES_SOURCES = $(ES_LIB_SRC)/entropy_bundle.c \
+	$(ES_LIB_SRC)/entropy_generator.c
 ES_OBJECTS = $(ES_SOURCES:.c=.o)
 
 # Compiler options
