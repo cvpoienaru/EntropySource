@@ -176,6 +176,19 @@ const int es_update_entropy_block_content(
 	const char *content);
 
 /**
+ * Requests the content of the specified entropy block. A copy of the block
+ * content is performed and the responsibility for freeing it goes to the caller
+ * function.
+ *
+ * @param block The entropy block for which we request the content.
+ * @param content A copy of the contents of the specified entropy block.
+ * @return ES_SUCCESS if the operation was successfull, ES_FAILURE otherwise.
+ */
+const int es_request_entropy_block_content(
+	struct es_entropy_block *block,
+	char **content);
+
+/**
  * Validates the specified entropy block state.
  *
  * @param block_state The block state to be validated.

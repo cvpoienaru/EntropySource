@@ -401,6 +401,46 @@ const int es_update_entropy_block_content(
 }
 
 /**
+ * Requests the content of the specified entropy block. A copy of the block
+ * content is performed and the responsibility for freeing it goes to the caller
+ * function.
+ *
+ * @param block The entropy block for which we request the content.
+ * @param content A copy of the contents of the specified entropy block.
+ * @return ES_SUCCESS if the operation was successfull, ES_FAILURE otherwise.
+ */
+const int es_request_entropy_block_content(
+	struct es_entropy_block *block,
+	char **content)
+{
+	/* Perform sanity checks. */
+	if(!block)
+		return ES_FAILURE;
+
+	if(!es_validate_entropy_block(block) != ES_SUCCESS)
+		return ES_FAILURE;
+
+	if(block->state == ES_DIRTY_BLOCK_STATE)
+		return ES_FAILURE;
+
+	/* Allocate memory for the entropy block content copy. */
+	*content = (char*)calloc(block->size, sizeof(char));
+	if(!*content)
+		return ES_FAILURE;
+
+	/* Copy the contents of the current entropy block. */
+	strncpy(*content, block->content, size);
+
+	/*
+	 * Change the block state to dirty now that the block content has been
+	 * consumed.
+	 */
+	block->state = ES_DIRTY_BLOCK_STATE;
+
+	return ES_SUCCESS;
+}
+
+/**
  * Validates the specified entropy block state.
  *
  * @param block_state The block state to be validated.
