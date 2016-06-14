@@ -47,7 +47,7 @@ struct es_entropy_bundle* es_alloc_entropy_bundle(void)
 	/* Allocate memory for the entropy bundle structure. */
 	bundle = (struct es_entropy_bundle*)malloc(
 		sizeof(struct es_entropy_bundle));
-	
+
 	return bundle;
 }
 
