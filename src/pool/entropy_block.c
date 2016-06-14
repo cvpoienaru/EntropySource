@@ -351,7 +351,7 @@ const int es_update_entropy_block_content(
 	buffer_size = strlen(block->buffer);
 	copy_size = es_min(strlen(content), block->size - buffer_size - 1);
 	strncat(block->buffer, content, copy_size);
-	block->buffer[buffer_size - 1] = '\0';
+	block->buffer[strlen(block->buffer) - 1] = '\0';
 
 	/*
 	 * Compute the entropy percentage for the entropy block buffer. If the
@@ -429,7 +429,7 @@ const int es_request_entropy_block_content(
 		return ES_FAILURE;
 
 	/* Copy the contents of the current entropy block. */
-	strncpy(*content, block->content, size);
+	strncpy(*content, block->content, block->size);
 
 	/*
 	 * Change the block state to dirty now that the block content has been
