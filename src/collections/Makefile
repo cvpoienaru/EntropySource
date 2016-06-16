@@ -30,7 +30,8 @@ ES_LIB_SRC = $(ES_SRC)/collections
 ES_LIB_OUT = $(ES_LIB)/$(ES_LIB_PREFIX)$(ES_LIB_NAME).$(ES_LIB_EXT)
 
 # Library source & object files
-ES_SOURCES = $(ES_LIB_SRC)/queue.c
+ES_SOURCES = $(ES_LIB_SRC)/queue.c \
+	$(ES_LIB_SRC)/hashtable.c
 ES_OBJECTS = $(ES_SOURCES:.c=.o)
 
 # Compiler options
