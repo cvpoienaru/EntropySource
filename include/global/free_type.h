@@ -37,4 +37,10 @@
  */
 typedef void (*es_free_data_function)(void **data);
 
+/**
+ * Represents a function pointer definition used by GLib for freeing complex
+ * data structures.
+ */
+typedef void (*es_free_library_function)(void *data);
+
 #endif /* ENTROPY_SOURCE_GLOBAL_FREE_TYPE_H_ */
