@@ -112,7 +112,7 @@ const int es_init_device_descriptor(struct es_device_descriptor *descriptor)
 		return ES_FAILURE;
 
 	/* Initialize the structure fields with their default values. */
-	descriptor->fd = ES_DEFAULT_FILE_DESCRIPTOR;
+	descriptor->fd = ES_DEFAULT_DESCRIPTOR;
 	descriptor->stop = FALSE;
 
 	return ES_SUCCESS;
