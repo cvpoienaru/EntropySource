@@ -39,8 +39,10 @@ struct es_device_descriptor {
 	/** The file descriptor associated with the connected device. */
 	int fd;
 
-	/** TRUE if the device should stop the update loop, FALSE otherwise. */
-	int stop;
+	/**
+	 * TRUE if the device is still runnable in the update loop, FALSE otherwise.
+	 */
+	int runnable;
 
 	/** The serial bundle associated with the connected device. */
 	struct es_serial_bundle *serial_bundle;

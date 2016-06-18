@@ -240,7 +240,7 @@ const int es_clean_entropy_pool(struct es_entropy_bundle *bundle)
 
 	while(TRUE) {
 		/* Checks if the current device thread should stop gracefully. */
-		if(bundle->descriptor->stop)
+		if(!bundle->descriptor->runnable)
 			break;
 
 		/* Extract a dirty entropy block index from the dirty queue. */
