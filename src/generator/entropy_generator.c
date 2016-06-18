@@ -28,6 +28,7 @@
 #include <generator/entropy_generator.h>
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
@@ -266,20 +267,25 @@ const int es_clean_entropy_pool(struct es_entropy_bundle *bundle)
 			if(ret != ES_SUCCESS)
 				continue;
 
-			printf(
-				"Entropy block %d size: %d bytes\n",
-				*index,
-				strlen(bundle->pool->blocks[*index]->content));
-			printf(
-				"Entropy block %d content:\n%s\n",
-				*index,
-				bundle->pool->blocks[*index]->content);
+			if(ES_DEBUG) {
+				printf(
+					"Entropy block %d size: %d bytes\n",
+					*index,
+					strlen(bundle->pool->blocks[*index]->content));
+				printf(
+					"Entropy block %d content:\n%s\n",
+					*index,
+					bundle->pool->blocks[*index]->content);
+			}
 		} else {
 			/* No blocks to be cleaned were found. */
 			/* TODO: Cache some device readings in this case. */
 
 			/* Sleep until some dirty blocks become available. */
-			printf("All blocks are clean. Nothing to do ... Sleep\n");
+			if(ES_DEBUG) {
+				printf("All blocks are clean. Nothing to do ... Sleep\n");
+			}
+
 			sleep(ES_DEVICE_THREAD_SLEEP);
 		}
 	}

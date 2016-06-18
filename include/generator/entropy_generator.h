@@ -29,6 +29,7 @@
 #define ENTROPY_SOURCE_GENERATOR_ENTROPY_GENERATOR_H_
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
