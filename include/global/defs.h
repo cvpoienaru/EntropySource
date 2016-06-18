@@ -50,13 +50,16 @@
 #define TRUE !(FALSE)
 #endif
 
+/** Represents the definition of the debug mode. */
+#define ES_DEBUG 1
+
 /** Represents the definition of a successfull operation. */
 #define ES_SUCCESS EXIT_SUCCESS
 
 /** Represents the definition of an unsuccessfull operation. */
 #define ES_FAILURE EXIT_FAILURE
 
-/** Represents the definition of a non-matchable file descriptor. */
-#define ES_DEFAULT_FILE_DESCRIPTOR -1
+/** Represents the definition of a non-matchable descriptor. */
+#define ES_DEFAULT_DESCRIPTOR -1
 
 #endif /* ENTROPY_SOURCE_GLOBAL_DEFS_H_ */
