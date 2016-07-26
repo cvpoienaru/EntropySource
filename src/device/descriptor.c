@@ -193,7 +193,7 @@ const int es_validate_device_descriptor(
 	if(descriptor->fd < 0)
 		return ES_FAILURE;
 
-	if(descriptor->stop != TRUE && descriptor->stop != FALSE)
+	if(descriptor->runnable != TRUE && descriptor->runnable != FALSE)
 		return ES_FAILURE;
 
 	return ES_SUCCESS;
