@@ -30,7 +30,12 @@ declare -a primary_build_list=( \
 	"crypto" \
 	"device" \
 	"pool" \
-	"generator")
+	"generator" \
+	"communication" \
+	"component/entropy" \
+	"component/load_balancer" \
+	"component/client")
 
 declare -a test_build_list=( \
-	"test/device")
+	"test/device" \
+	"test/communication")
